@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brasa Prime</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header>
+  <div class="logo">BRASA PRIME</div>
+  <nav>
+    <a href="index.html">Início</a>
+    <a href="cardapio.html">Cardápio</a>
+    <a href="delivery.html">Delivery</a>
+    <a href="reservas.html">Reservas</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="overlay"></div>
+  <div class="hero-content">
+    <h1>Experiência Premium em Sabor</h1>
+    <p>Os melhores pratos da cidade com qualidade, sabor e entrega rápida.</p>
+    <button onclick="window.location.href='cardapio.html'">Fazer Pedido</button>
+  </div>
+</section>
+
+<section class="destaques">
+  <h2>Pratos em Destaque</h2>
+  <div class="cards">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=1200&auto=format&fit=crop">
+      <h3>Frango Especial</h3>
+      <p>Frango temperado com ervas finas.</p>
+      <span>R$ 59,90</span>
+      <button onclick="adicionarCarrinho('Frango Especial', 59.90)">Adicionar</button>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=1200&auto=format&fit=crop">
+      <h3>Hambúrguer Prime</h3>
+      <p>Hambúrguer artesanal premium.</p>
+      <span>R$ 34,90</span>
+      <button onclick="adicionarCarrinho('Hambúrguer Prime', 34.90)">Adicionar</button>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=1200&auto=format&fit=crop">
+      <h3>Picanha Grill</h3>
+      <p>Corte premium na brasa.</p>
+      <span>R$ 89,90</span>
+      <button onclick="adicionarCarrinho('Picanha Grill', 89.90)">Adicionar</button>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Brasa Prime - Todos os direitos reservados.</p>
+</footer>
+
+<script type="module" src="assets/js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Delivery - Brasa Prime</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/delivery.css">
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">BRASA PRIME</div>
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="cardapio.html">Cardápio</a>
+      <a href="delivery.html">Delivery</a>
+      <a href="reservas.html">Reservas</a>
+    </nav>
+  </header>
+
+  <div class="carrinho-container">
+    <h2>Seu Carrinho</h2>
+    <ul id="lista-carrinho">
+    </ul>
+
+    <h3 id="total">Total: R$ 0,00</h3>
+
+    <div class="checkout-section">
+      <h3>Forma de Pagamento</h3>
+      <select id="pagamento" onchange="mostrarPagamento()">
+        <option value="">Escolha o pagamento</option>
+        <option value="pix">Pix</option>
+        <option value="cartao">Cartão</option>
+        <option value="dinheiro">Dinheiro</option>
+      </select>
+
+
+      <div id="pix-area" class="pagamento-box">
+        <h3>Pagamento via Pix</h3>
+        <div style="text-align: center;">
+          <img src="assets/img/pix.png" alt="QR Code Pix">
+          <p><strong>Chave Pix:</strong> brasaprime@email.com</p>
+        </div>
+      </div>
+
+
+      <div id="cartao-area" class="pagamento-box">
+        <h3>Dados do Cartão</h3>
+        <input type="text" placeholder="Nome no cartão">
+        <input type="text" placeholder="Número do cartão">
+        <div style="display: flex; gap: 10px;">
+          <input type="text" placeholder="Validade (MM/AA)">
+          <input type="text" placeholder="CVV">
+        </div>
+        <select>
+          <option>Crédito</option>
+          <option>Débito</option>
+        </select>
+      </div>
+
+
+      <div id="dinheiro-area" class="pagamento-box">
+        <h3>Pagamento em Dinheiro</h3>
+        <input type="text" placeholder="Precisa de troco para quanto?">
+      </div>
+
+      <button onclick="finalizarPedido()" class="finalizar">Finalizar Pedido</button>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2026 Brasa Prime - Todos os direitos reservados.</p>
+  </footer>
+
+  <script type="module" src="assets/js/script.js"></script>
+</body>
+
+</html>

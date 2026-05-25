@@ -1,0 +1,41 @@
+.carrinho-container {
+      max-width: 800px;
+      margin: 150px auto 50px;
+      padding: 20px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    #lista-carrinho {
+      list-style: none;
+      padding: 0;
+    }
+    .pagamento-box {
+      display: none;
+      margin-top: 20px;
+      padding: 20px;
+      background: #f4f4f4;
+      border-radius: 8px;
+    }
+    .pagamento-box input, .pagamento-box select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+    .finalizar {
+      width: 100%;
+      padding: 15px;
+      background: #e67e22;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      font-size: 18px;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+    .finalizar:hover {
+      background: #d35400;
+    }

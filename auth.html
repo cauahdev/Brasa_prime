@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login / Cadastro - Brasa Prime</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/auth.css">
+
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">BRASA PRIME</div>
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="cardapio.html">Cardápio</a>
+      <a href="delivery.html">Delivery</a>
+      <a href="reservas.html">Reservas</a>
+    </nav>
+  </header>
+
+
+  <div class="notification-container" id="notification-container"></div>
+
+  <div class="auth-container">
+
+    <div id="login-section">
+      <h2>Entrar</h2>
+      <form id="login-form" class="auth-form">
+        <input type="email" id="login-email" placeholder="E-mail" required>
+        <div class="form-group password-input-wrapper">
+          <input type="password" id="login-password" placeholder="Senha" required>
+          <button type="button" class="password-toggle" onclick="togglePasswordVisibility('login-password')">•</button>
+        </div>
+        <button type="submit">Entrar</button>
+      </form>
+      <div class="auth-toggle">
+        Não tem uma conta? <a onclick="toggleAuth()">Cadastre-se</a>
+      </div>
+    </div>
+
+
+    <div id="register-section" class="hidden">
+      <h2>Cadastrar</h2>
+      <form id="register-form" class="auth-form">
+        <input type="email" id="register-email" placeholder="E-mail" required>
+
+        <div class="form-group password-input-wrapper">
+          <input type="password" id="register-password" placeholder="Senha" required>
+          <button type="button" class="password-toggle"
+            onclick="togglePasswordVisibility('register-password')">•</button>
+        </div>
+
+
+        <div class="password-requirements" id="password-requirements">
+          <div class="requirement" id="req-length">
+            <span class="requirement-icon">○</span>
+            <span>Mínimo de 8 caracteres</span>
+          </div>
+          <div class="requirement" id="req-uppercase">
+            <span class="requirement-icon">○</span>
+            <span>Pelo menos uma letra maiúscula (A-Z)</span>
+          </div>
+          <div class="requirement" id="req-lowercase">
+            <span class="requirement-icon">○</span>
+            <span>Pelo menos uma letra minúscula (a-z)</span>
+          </div>
+          <div class="requirement" id="req-number">
+            <span class="requirement-icon">○</span>
+            <span>Pelo menos um número (0-9)</span>
+          </div>
+          <div class="password-strength-bar">
+            <div class="password-strength-fill" id="strength-fill"></div>
+          </div>
+          <div class="password-strength-text" id="strength-text">Força: Fraca</div>
+        </div>
+
+        <div class="form-group password-input-wrapper">
+          <input type="password" id="register-confirm-password" placeholder="Confirmar Senha" required>
+          <button type="button" class="password-toggle"
+            onclick="togglePasswordVisibility('register-confirm-password')">•</button>
+        </div>
+
+        <button type="submit" id="register-btn">Criar Conta</button>
+      </form>
+      <div class="auth-toggle">
+        Já tem uma conta? <a onclick="toggleAuth()">Entre aqui</a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2026 Brasa Prime - Todos os direitos reservados.</p>
+  </footer>
+
+  <script type="module" src="assets/js/auth.js"></script>
+
+</body>
+
+</html>

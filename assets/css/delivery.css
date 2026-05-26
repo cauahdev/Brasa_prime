@@ -1,0 +1,227 @@
+/* ===== DELIVERY PAGE ===== */
+.delivery-section {
+  padding: 120px 0 80px;
+  min-height: 100vh;
+}
+
+.carrinho-card {
+  background: #1b1b1b;
+  border-radius: 16px;
+  padding: 32px;
+  border: 1px solid rgba(212,175,55,0.15);
+}
+
+.carrinho-card h2 {
+  font-size: 1.6rem;
+  font-weight: 800;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#lista-carrinho {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.item-carrinho {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 14px;
+  background: #222;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  border: 1px solid rgba(255,255,255,0.05);
+}
+
+.item-nome {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.item-preco {
+  color: #d4af37;
+  font-weight: 700;
+}
+
+.btn-remover {
+  background: none;
+  border: none;
+  color: #e74c3c;
+  cursor: pointer;
+  font-size: 1.1rem;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+.btn-remover:hover {
+  background: rgba(231,76,60,0.15);
+}
+
+.total-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 14px;
+  background: #222;
+  border-radius: 10px;
+  margin-top: 16px;
+  border: 1px solid rgba(212,175,55,0.2);
+}
+
+.total-label {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ccc;
+}
+
+.total-valor {
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: #d4af37;
+}
+
+/* ===== CHECKOUT CARD ===== */
+.checkout-card {
+  background: #1b1b1b;
+  border-radius: 16px;
+  padding: 32px;
+  border: 1px solid rgba(212,175,55,0.15);
+  position: sticky;
+  top: 90px;
+}
+
+.checkout-card h3 {
+  font-size: 1.3rem;
+  font-weight: 800;
+  margin-bottom: 22px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.checkout-card .section-label {
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #d4af37;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+
+/* Form controls dark */
+.form-dark {
+  background: #222 !important;
+  border: 1px solid #333 !important;
+  color: white !important;
+  border-radius: 8px !important;
+  padding: 12px 14px !important;
+  font-size: 0.95rem;
+  transition: border-color 0.3s;
+}
+
+.form-dark:focus {
+  background: #222 !important;
+  border-color: #d4af37 !important;
+  color: white !important;
+  box-shadow: 0 0 0 3px rgba(212,175,55,0.12) !important;
+}
+
+.form-dark::placeholder { color: #555; }
+.form-dark option { background: #222; }
+
+/* ===== PAGAMENTO BOXES ===== */
+.pagamento-box {
+  display: none;
+  margin-top: 16px;
+  padding: 20px;
+  background: #222;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.07);
+}
+
+.pagamento-box.active { display: block; }
+
+/* PIX FIX - fundo branco para o QR code ficar visível */
+.pix-qr-wrapper {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 16px;
+  display: inline-block;
+  margin: 0 auto;
+}
+
+.pix-qr-wrapper img {
+  width: 160px;
+  height: 160px;
+  display: block;
+}
+
+.pix-chave {
+  background: #1b1b1b;
+  border: 1px solid rgba(212,175,55,0.3);
+  border-radius: 8px;
+  padding: 12px 16px;
+  margin-top: 14px;
+  font-size: 0.9rem;
+  color: #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  word-break: break-all;
+}
+
+.pix-chave strong {
+  color: #d4af37;
+  margin-right: 6px;
+}
+
+/* ===== BOTÃO FINALIZAR ===== */
+.btn-finalizar {
+  width: 100%;
+  padding: 16px;
+  background: #d4af37;
+  color: #000;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.05rem;
+  font-weight: 800;
+  cursor: pointer;
+  margin-top: 22px;
+  transition: background 0.3s, transform 0.2s;
+  letter-spacing: 0.5px;
+}
+
+.btn-finalizar:hover {
+  background: #b8962d;
+  transform: translateY(-1px);
+}
+
+.btn-finalizar:disabled {
+  background: #555;
+  color: #999;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Vazio carrinho */
+.carrinho-vazio {
+  text-align: center;
+  padding: 40px 20px;
+  color: #666;
+}
+
+.carrinho-vazio i {
+  font-size: 3rem;
+  margin-bottom: 12px;
+  opacity: 0.4;
+}
+
+@media (max-width: 991px) {
+  .checkout-card { position: static; margin-top: 24px; }
+}

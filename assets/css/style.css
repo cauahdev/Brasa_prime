@@ -1,0 +1,452 @@
+:root {
+  --gold: #d4af37;
+  --gold-dark: #b8962d;
+  --dark: #0f0f0f;
+  --dark2: #1b1b1b;
+  --dark3: #222;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #0f0f0f;
+  color: white;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.navbar {
+  background: rgba(0, 0, 0, 0.85) !important;
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+  padding: 14px 0;
+}
+
+.navbar-brand {
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: var(--gold) !important;
+  letter-spacing: 2px;
+}
+
+.navbar-nav .nav-link {
+  color: rgba(255, 255, 255, 0.85) !important;
+  font-weight: 500;
+  padding: 8px 16px !important;
+  transition: color 0.3s;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: var(--gold) !important;
+}
+
+.btn-auth {
+  background: var(--gold);
+  color: #000 !important;
+  font-weight: 700;
+  border-radius: 6px;
+  padding: 8px 18px !important;
+  transition: background 0.3s;
+}
+
+.btn-auth:hover {
+  background: var(--gold-dark);
+  color: #000 !important;
+}
+
+.navbar-toggler {
+  border-color: var(--gold);
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(212, 175, 55, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.hero {
+  height: 100vh;
+  background-image: url("../img/fundo.webp");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.62);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 20px;
+}
+
+.hero-content h1 {
+  font-size: clamp(2.2rem, 6vw, 4rem);
+  font-weight: 900;
+  letter-spacing: 1px;
+  margin-bottom: 18px;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  max-width: 620px;
+  margin: 0 auto 30px;
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.btn-gold {
+  background: var(--gold);
+  color: #000;
+  border: none;
+  font-weight: 700;
+  font-size: 1.1rem;
+  padding: 14px 36px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-gold:hover {
+  background: var(--gold-dark);
+  color: #000;
+  transform: scale(1.05);
+}
+
+.section-title {
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section-title span {
+  color: var(--gold);
+}
+
+.prato-card {
+  background: var(--dark2);
+  border-radius: 16px;
+  overflow: hidden;
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.prato-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
+}
+
+.prato-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.prato-card-body {
+  padding: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.prato-card-body h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.prato-card-body p {
+  color: #999;
+  font-size: 0.9rem;
+  margin-bottom: 12px;
+  flex: 1;
+}
+
+.prato-price {
+  color: var(--gold);
+  font-size: 1.4rem;
+  font-weight: 800;
+  margin-bottom: 14px;
+}
+
+.btn-add {
+  background: var(--gold);
+  color: #000;
+  border: none;
+  border-radius: 8px;
+  padding: 11px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  width: 100%;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn-add:hover {
+  background: var(--gold-dark);
+}
+
+footer {
+  background: #000;
+  color: #666;
+  text-align: center;
+  padding: 28px;
+  font-size: 0.9rem;
+  border-top: 1px solid rgba(212, 175, 55, 0.15);
+}
+
+.notification-container {
+  position: fixed;
+  top: 80px;
+  right: 20px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 380px;
+}
+
+.notification {
+  padding: 14px 18px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  animation: slideIn 0.3s ease-out;
+  font-weight: 500;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(400px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slideOut {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(400px);
+    opacity: 0;
+  }
+}
+
+.notification.removing {
+  animation: slideOut 0.3s forwards;
+}
+.notification.success {
+  background: linear-gradient(135deg, #27ae60, #229954);
+  color: #fff;
+  border-left: 4px solid #1e8449;
+}
+.notification.error {
+  background: linear-gradient(135deg, #e74c3c, #c0392b);
+  color: #fff;
+  border-left: 4px solid #a93226;
+}
+.notification.warning {
+  background: linear-gradient(135deg, #f39c12, #e67e22);
+  color: #fff;
+  border-left: 4px solid #d35400;
+}
+.notification.info {
+  background: linear-gradient(135deg, #3498db, #2980b9);
+  color: #fff;
+  border-left: 4px solid #1f618d;
+}
+
+.reserva-section {
+  padding: 140px 0 80px;
+}
+
+.reserva-card {
+  background: var(--dark2);
+  border-radius: 16px;
+  padding: 40px;
+  border: 1px solid rgba(212, 175, 55, 0.15);
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+.reserva-card .form-control,
+.reserva-card .form-select {
+  background: var(--dark3);
+  border: 1px solid #333;
+  color: white;
+  border-radius: 8px;
+  padding: 14px;
+  font-size: 1rem;
+}
+
+.reserva-card .form-control:focus,
+.reserva-card .form-select:focus {
+  background: var(--dark3);
+  border-color: var(--gold);
+  color: white;
+  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.15);
+}
+
+.reserva-card .form-control::placeholder {
+  color: #666;
+}
+
+.auth-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 120px 20px 60px;
+}
+
+.auth-card {
+  background: var(--dark2);
+  border-radius: 16px;
+  padding: 40px;
+  width: 100%;
+  max-width: 420px;
+  border: 1px solid rgba(212, 175, 55, 0.15);
+}
+
+.auth-card h2 {
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin-bottom: 28px;
+  text-align: center;
+}
+
+.auth-card .form-control {
+  background: var(--dark3);
+  border: 1px solid #333;
+  color: white;
+  border-radius: 8px;
+  padding: 14px;
+}
+
+.auth-card .form-control:focus {
+  background: var(--dark3);
+  border-color: var(--gold);
+  color: white;
+  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.15);
+}
+
+.auth-card .form-control::placeholder {
+  color: #666;
+}
+
+.auth-toggle {
+  text-align: center;
+  margin-top: 20px;
+  color: #999;
+  font-size: 0.92rem;
+}
+
+.auth-toggle a {
+  color: var(--gold);
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/* Password requirements */
+.password-requirements {
+  margin-top: 10px;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 6px;
+  font-size: 13px;
+  display: none;
+}
+.password-requirements.show {
+  display: block;
+}
+.requirement {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+  color: #bbb;
+  transition: color 0.3s;
+}
+.requirement.met {
+  color: #27ae60;
+}
+.password-strength-bar {
+  width: 100%;
+  height: 4px;
+  background: #333;
+  border-radius: 2px;
+  margin-top: 8px;
+  overflow: hidden;
+}
+.password-strength-fill {
+  height: 100%;
+  width: 0%;
+  transition:
+    width 0.3s,
+    background 0.3s;
+}
+.password-strength-fill.weak {
+  width: 25%;
+  background: #e74c3c;
+}
+.password-strength-fill.fair {
+  width: 50%;
+  background: #f39c12;
+}
+.password-strength-fill.good {
+  width: 75%;
+  background: #f1c40f;
+}
+.password-strength-fill.strong {
+  width: 100%;
+  background: #27ae60;
+}
+.password-strength-text {
+  font-size: 12px;
+  margin-top: 6px;
+  color: #bbb;
+}
+.password-strength-text.strong {
+  color: #27ae60;
+}
+.password-toggle {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: var(--gold);
+  cursor: pointer;
+  font-size: 18px;
+}
+
+@media (max-width: 768px) {
+  .notification-container {
+    right: 10px;
+    left: 10px;
+    max-width: none;
+  }
+}

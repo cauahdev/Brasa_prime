@@ -1,3 +1,11 @@
+Alunos:
+Cauã Henrique N Tadeu - 04190548
+Sérgio Daniel de Paiva Machado - 04189247
+Ruan Mateus Catete Brandão- 04184061
+Jefferson Adriano Correa Pantoja - 04188270
+
+=========================================
+
 Autenticação Firebase
 
 - Login e Cadastro: Tela dedicada em auth.html

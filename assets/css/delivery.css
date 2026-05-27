@@ -1,4 +1,3 @@
-/* ===== DELIVERY PAGE ===== */
 .delivery-section {
   padding: 120px 0 80px;
   min-height: 100vh;
@@ -8,7 +7,7 @@
   background: #1b1b1b;
   border-radius: 16px;
   padding: 32px;
-  border: 1px solid rgba(212,175,55,0.15);
+  border: 1px solid rgba(212, 175, 55, 0.15);
 }
 
 .carrinho-card h2 {
@@ -34,7 +33,7 @@
   background: #222;
   border-radius: 8px;
   margin-bottom: 10px;
-  border: 1px solid rgba(255,255,255,0.05);
+  border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .item-nome {
@@ -59,7 +58,7 @@
 }
 
 .btn-remover:hover {
-  background: rgba(231,76,60,0.15);
+  background: rgba(231, 76, 60, 0.15);
 }
 
 .total-box {
@@ -70,7 +69,7 @@
   background: #222;
   border-radius: 10px;
   margin-top: 16px;
-  border: 1px solid rgba(212,175,55,0.2);
+  border: 1px solid rgba(212, 175, 55, 0.2);
 }
 
 .total-label {
@@ -85,12 +84,11 @@
   color: #d4af37;
 }
 
-/* ===== CHECKOUT CARD ===== */
 .checkout-card {
   background: #1b1b1b;
   border-radius: 16px;
   padding: 32px;
-  border: 1px solid rgba(212,175,55,0.15);
+  border: 1px solid rgba(212, 175, 55, 0.15);
   position: sticky;
   top: 90px;
 }
@@ -100,7 +98,7 @@
   font-weight: 800;
   margin-bottom: 22px;
   padding-bottom: 14px;
-  border-bottom: 1px solid rgba(255,255,255,0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .checkout-card .section-label {
@@ -113,7 +111,6 @@
   margin-top: 20px;
 }
 
-/* Form controls dark */
 .form-dark {
   background: #222 !important;
   border: 1px solid #333 !important;
@@ -128,25 +125,29 @@
   background: #222 !important;
   border-color: #d4af37 !important;
   color: white !important;
-  box-shadow: 0 0 0 3px rgba(212,175,55,0.12) !important;
+  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.12) !important;
 }
 
-.form-dark::placeholder { color: #555; }
-.form-dark option { background: #222; }
+.form-dark::placeholder {
+  color: #555;
+}
+.form-dark option {
+  background: #222;
+}
 
-/* ===== PAGAMENTO BOXES ===== */
 .pagamento-box {
   display: none;
   margin-top: 16px;
   padding: 20px;
   background: #222;
   border-radius: 12px;
-  border: 1px solid rgba(255,255,255,0.07);
+  border: 1px solid rgba(255, 255, 255, 0.07);
 }
 
-.pagamento-box.active { display: block; }
+.pagamento-box.active {
+  display: block;
+}
 
-/* PIX FIX - fundo branco para o QR code ficar visível */
 .pix-qr-wrapper {
   background: #ffffff;
   border-radius: 12px;
@@ -163,7 +164,7 @@
 
 .pix-chave {
   background: #1b1b1b;
-  border: 1px solid rgba(212,175,55,0.3);
+  border: 1px solid rgba(212, 175, 55, 0.3);
   border-radius: 8px;
   padding: 12px 16px;
   margin-top: 14px;
@@ -181,7 +182,6 @@
   margin-right: 6px;
 }
 
-/* ===== BOTÃO FINALIZAR ===== */
 .btn-finalizar {
   width: 100%;
   padding: 16px;
@@ -193,7 +193,9 @@
   font-weight: 800;
   cursor: pointer;
   margin-top: 22px;
-  transition: background 0.3s, transform 0.2s;
+  transition:
+    background 0.3s,
+    transform 0.2s;
   letter-spacing: 0.5px;
 }
 
@@ -209,7 +211,6 @@
   transform: none;
 }
 
-/* Vazio carrinho */
 .carrinho-vazio {
   text-align: center;
   padding: 40px 20px;
@@ -223,5 +224,8 @@
 }
 
 @media (max-width: 991px) {
-  .checkout-card { position: static; margin-top: 24px; }
+  .checkout-card {
+    position: static;
+    margin-top: 24px;
+  }
 }

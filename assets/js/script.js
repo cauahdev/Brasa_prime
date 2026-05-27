@@ -27,7 +27,7 @@ function showNotification(message, type = "info", duration = 4000) {
   }, duration);
 }
 
-/* ===== AUTH ===== */
+/* auth */
 onAuthStateChanged(auth, (user) => {
   currentUser = user;
   atualizarUIAutenticacao();
@@ -118,7 +118,6 @@ async function finalizarPedido() {
     return;
   }
 
-  // Validar endereço
   const rua = document.getElementById("endereco-rua")?.value?.trim();
   const numero = document.getElementById("endereco-numero")?.value?.trim();
   const bairro = document.getElementById("endereco-bairro")?.value?.trim();
@@ -169,7 +168,7 @@ async function finalizarPedido() {
       atualizarCarrinho();
       document.getElementById("pagamento").value = "";
       mostrarPagamento();
-      // Limpar endereço
+      // Limpa o endereço
       ["rua", "numero", "bairro", "complemento", "cidade", "cep"].forEach(
         (f) => {
           const el = document.getElementById(`endereco-${f}`);
@@ -183,7 +182,7 @@ async function finalizarPedido() {
   }
 }
 
-/* ===== PAGAMENTO ===== */
+/* pagemento aqui sergio */
 function mostrarPagamento() {
   const pagamento = document.getElementById("pagamento")?.value;
   ["pix-area", "cartao-area", "dinheiro-area"].forEach((id) => {
